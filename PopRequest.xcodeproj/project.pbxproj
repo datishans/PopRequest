@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59379D81A24090635DE96EB1 /* Pods_Popup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C691D94D8C0C2614F38B65 /* Pods_Popup.framework */; };
 		94E0FC3F1BD7FC3600A3C537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0FC3E1BD7FC3600A3C537 /* AppDelegate.swift */; };
 		94E0FC411BD7FC3600A3C537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0FC401BD7FC3600A3C537 /* ViewController.swift */; };
 		94E0FC431BD7FC3600A3C537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E0FC421BD7FC3600A3C537 /* Assets.xcassets */; };
 		94E0FC461BD7FC3600A3C537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E0FC441BD7FC3600A3C537 /* Main.storyboard */; };
 		94E0FC4E1BD7FCBE00A3C537 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0FC4D1BD7FCBE00A3C537 /* EventMonitor.swift */; };
+		9B36BD639525E73FDDCA4C5B /* Pods_PopRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1374FECB8470274DAB204C3A /* Pods_PopRequest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1374FECB8470274DAB204C3A /* Pods_PopRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E0FC3B1BD7FC3600A3C537 /* PopRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E0FC3E1BD7FC3600A3C537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E0FC401BD7FC3600A3C537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +26,8 @@
 		94E0FC4D1BD7FCBE00A3C537 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		9F028D0115A7E53858429954 /* Pods-Popup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.release.xcconfig"; sourceTree = "<group>"; };
 		CCD4FCD57AC26D533FB7E3EC /* Pods-Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.debug.xcconfig"; sourceTree = "<group>"; };
+		D3BC34C44F73D69145089D06 /* Pods-PopRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopRequest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest.release.xcconfig"; sourceTree = "<group>"; };
+		D3C67F2AB3B68E9AA726F6EF /* Pods-PopRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopRequest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C691D94D8C0C2614F38B65 /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -33,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59379D81A24090635DE96EB1 /* Pods_Popup.framework in Frameworks */,
+				9B36BD639525E73FDDCA4C5B /* Pods_PopRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,8 @@
 			children = (
 				CCD4FCD57AC26D533FB7E3EC /* Pods-Popup.debug.xcconfig */,
 				9F028D0115A7E53858429954 /* Pods-Popup.release.xcconfig */,
+				D3C67F2AB3B68E9AA726F6EF /* Pods-PopRequest.debug.xcconfig */,
+				D3BC34C44F73D69145089D06 /* Pods-PopRequest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F8C691D94D8C0C2614F38B65 /* Pods_Popup.framework */,
+				1374FECB8470274DAB204C3A /* Pods_PopRequest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +169,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Popup/Pods-Popup-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -172,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Popup/Pods-Popup-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB73F148328265FCD883EFA3 /* [CP] Check Pods Manifest.lock */ = {
@@ -186,7 +192,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Popup-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PopRequest-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -205,7 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Popup/Pods-Popup-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -334,7 +340,7 @@
 		};
 		94E0FC4B1BD7FC3600A3C537 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCD4FCD57AC26D533FB7E3EC /* Pods-Popup.debug.xcconfig */;
+			baseConfigurationReference = D3C67F2AB3B68E9AA726F6EF /* Pods-PopRequest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -349,7 +355,7 @@
 		};
 		94E0FC4C1BD7FC3600A3C537 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F028D0115A7E53858429954 /* Pods-Popup.release.xcconfig */;
+			baseConfigurationReference = D3BC34C44F73D69145089D06 /* Pods-PopRequest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
