@@ -86,10 +86,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //                }
                 
                 if self.currentAmountOfPullRequests != -1 && self.currentAmountOfPullRequests < prs.count {
-                    self.showNotification()
+                    self.showNotification(amountOfPullRequests: prs.count)
                 }
                 
                 self.currentAmountOfPullRequests = prs.count
+                
                 self.updateStatusToView(nil)
             }
             
@@ -98,10 +99,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         })
     }
     
-    func showNotification() -> Void {
+    func showNotification(amountOfPullRequests: Int) -> Void {
         let notification = NSUserNotification()
         notification.title = "New pull request created."
-        notification.informativeText = "There are now \(self.currentAmountOfPullRequests) pull requests."
+        notification.informativeText = "There are now \(amountOfPullRequests) open pull requests."
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.deliver(notification)
     }
