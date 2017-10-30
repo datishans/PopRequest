@@ -7,3 +7,4 @@ todo
 * readme/install/xcode9
 * quit with yes/no
 * credentials to keychain (are now in user-defaults. plain text)
+* AF-Objc migrate to AF-Swift
