@@ -653,11 +653,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewControllerId" id="XfG-lQ-9wD" customClass="ViewController" customModule="PopRequest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="250"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epW-W3-lUk">
-                                <rect key="frame" x="406" y="205" width="66" height="32"/>
+                                <rect key="frame" x="406" y="215" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QPq-ff-gA2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -668,7 +668,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZP-dP-Owb">
-                                <rect key="frame" x="20" y="214" width="386" height="17"/>
+                                <rect key="frame" x="20" y="224" width="386" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="33r-CQ-4ZS">
                                     <font key="font" metaFont="system"/>
@@ -677,7 +677,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRV-D9-JHm">
-                                <rect key="frame" x="20" y="189" width="224" height="17"/>
+                                <rect key="frame" x="20" y="199" width="224" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="qaw-9f-J5c">
                                     <font key="font" metaFont="system"/>
@@ -686,7 +686,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ya-MF-DoM">
-                                <rect key="frame" x="18" y="158" width="224" height="17"/>
+                                <rect key="frame" x="18" y="168" width="224" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bitbucket settings" id="ITI-P0-DAe">
                                     <font key="font" metaFont="system"/>
@@ -695,7 +695,7 @@
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSp-gN-fA1">
-                                <rect key="frame" x="20" y="96" width="304" height="22"/>
+                                <rect key="frame" x="20" y="106" width="304" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="faH-2f-LX2">
                                     <font key="font" metaFont="system"/>
@@ -707,7 +707,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHG-3m-Fdw">
-                                <rect key="frame" x="20" y="128" width="304" height="22"/>
+                                <rect key="frame" x="20" y="138" width="304" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="G7J-B9-Ywv">
                                     <font key="font" metaFont="system"/>
@@ -716,7 +716,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-tp-v7n">
-                                <rect key="frame" x="20" y="64" width="304" height="22"/>
+                                <rect key="frame" x="20" y="42" width="384" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Repository" drawsBackground="YES" id="1xz-ca-XX7">
                                     <font key="font" metaFont="system"/>
@@ -724,8 +724,17 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdj-wA-QoL">
+                                <rect key="frame" x="20" y="74" width="384" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="https://api.bitbucket.org/2.0/repositories/your_company" placeholderString="API Url" drawsBackground="YES" id="76N-EZ-6Id">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDj-1V-dqV">
-                                <rect key="frame" x="255" y="28" width="75" height="32"/>
+                                <rect key="frame" x="335" y="6" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lFr-bA-mJG">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -738,6 +747,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bbAPIUrl" destination="zdj-wA-QoL" id="kb8-He-cmm"/>
                         <outlet property="bbPassword" destination="GSp-gN-fA1" id="cax-Xu-zno"/>
                         <outlet property="bbRepository" destination="1xz-ca-XX7" id="SV0-6u-7hl"/>
                         <outlet property="bbUsername" destination="gHG-3m-Fdw" id="sMf-hg-JXv"/>

@@ -47,6 +47,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var repo = ""
         var user = ""
         var pass = ""
+        var apiRepoUrl = "https://api.bitbucket.org/2.0/repositories/your_company"
+        
         if let u = NSUserDefaultsController.shared.defaults.string(forKey: "bbUsername")  {
             user = u
         }
@@ -54,10 +56,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             pass = u
         }
         if let u = NSUserDefaultsController.shared.defaults.string(forKey: "bbRepository")  {
-           repo = u
+            repo = u
+        }
+        if let u = NSUserDefaultsController.shared.defaults.string(forKey: "bbAPIUrl")  {
+            apiRepoUrl = u
         }
         
-        let url = "https://api.bitbucket.org/2.0/repositories/centraalbeheer/"+repo+"/pullrequests/?state=OPEN"
+        let url = apiRepoUrl + "/" + repo + "/pullrequests/?state=OPEN"
         
         let manager = AFHTTPSessionManager.init()
         manager.responseSerializer = AFJSONResponseSerializer()
