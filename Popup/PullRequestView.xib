@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="679" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htL-EA-X2h" userLabel="creator_avatar">
+                    <rect key="frame" x="8" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YAD-nO-c4D"/>
+                        <constraint firstAttribute="width" constant="40" id="pdP-ZX-GgP"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="avatar" id="QwX-io-hug"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-l0-rYv">
+                    <rect key="frame" x="63" y="17" width="454" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="This is a very long pull request name that will have to concat and not show" drawsBackground="YES" id="2tT-zO-qtp">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="BHs-iO-Jii">
+                    <rect key="frame" x="661" y="17" width="10" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1" drawsBackground="YES" id="SSU-JB-938">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="htL-EA-X2h" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="35k-jK-JbF"/>
+                <constraint firstItem="HGF-l0-rYv" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="7Jd-fb-qGf"/>
+                <constraint firstAttribute="trailing" secondItem="BHs-iO-Jii" secondAttribute="trailing" constant="8" id="N6V-Im-jyL"/>
+                <constraint firstItem="HGF-l0-rYv" firstAttribute="leading" secondItem="htL-EA-X2h" secondAttribute="trailing" constant="15" id="Qf6-9F-TQk"/>
+                <constraint firstItem="BHs-iO-Jii" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="RBi-ww-1qM"/>
+                <constraint firstItem="BHs-iO-Jii" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HGF-l0-rYv" secondAttribute="trailing" constant="16" id="aq3-3K-ZSZ"/>
+                <constraint firstItem="htL-EA-X2h" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="pTB-a4-KgY"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="view.layer.cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="153.5" y="160"/>
+        </customView>
+        <collectionViewItem id="gHv-du-9uq" customClass="PullRequestView" customModule="PopRequest" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="htL-EA-X2h" id="NC1-w8-A7a"/>
+                <outlet property="view" destination="c22-O7-iKe" id="JMG-xz-RiS"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="avatar" width="37.5" height="37.5"/>
+    </resources>
+</document>

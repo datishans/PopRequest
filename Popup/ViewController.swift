@@ -29,6 +29,16 @@ class ViewController: NSViewController {
         NSUserDefaultsController.shared.defaults.setValue(bbUsername.stringValue, forKey: "bbUsername")
         NSUserDefaultsController.shared.defaults.setValue(bbPassword.stringValue, forKey: "bbPassword")
         NSUserDefaultsController.shared.defaults.setValue(bbRepository.stringValue, forKey: "bbRepository")
+        
+        //performSegue(withIdentifier: NSStoryboardSegue.Identifier("showPullRequests"), sender: self)
+        
+        if let pullRequestViewController = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PullRequestViewController")) as? NSViewController {
+            
+            
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.popover.contentViewController = pullRequestViewController
+        }
+        
     }
     
     private func readSettings() {

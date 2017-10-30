@@ -13,6 +13,10 @@
 		94E0FC461BD7FC3600A3C537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E0FC441BD7FC3600A3C537 /* Main.storyboard */; };
 		94E0FC4E1BD7FCBE00A3C537 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0FC4D1BD7FCBE00A3C537 /* EventMonitor.swift */; };
 		9B36BD639525E73FDDCA4C5B /* Pods_PopRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1374FECB8470274DAB204C3A /* Pods_PopRequest.framework */; };
+		D41CF1251FA48189002F6DEC /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41CF1241FA48189002F6DEC /* PullRequest.swift */; };
+		D4CDE29F1FA4D2610066EE18 /* PullRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDE29E1FA4D2610066EE18 /* PullRequestsViewController.swift */; };
+		D4CDE2A11FA4D27C0066EE18 /* PullRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CDE2A01FA4D27C0066EE18 /* PullRequestView.xib */; };
+		D4CDE2A31FA4D31A0066EE18 /* PullRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDE2A21FA4D31A0066EE18 /* PullRequestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		CCD4FCD57AC26D533FB7E3EC /* Pods-Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.debug.xcconfig"; sourceTree = "<group>"; };
 		D3BC34C44F73D69145089D06 /* Pods-PopRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopRequest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest.release.xcconfig"; sourceTree = "<group>"; };
 		D3C67F2AB3B68E9AA726F6EF /* Pods-PopRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopRequest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopRequest/Pods-PopRequest.debug.xcconfig"; sourceTree = "<group>"; };
+		D41CF1241FA48189002F6DEC /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		D4CDE29E1FA4D2610066EE18 /* PullRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsViewController.swift; sourceTree = "<group>"; };
+		D4CDE2A01FA4D27C0066EE18 /* PullRequestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullRequestView.xib; sourceTree = "<group>"; };
+		D4CDE2A21FA4D31A0066EE18 /* PullRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestView.swift; sourceTree = "<group>"; };
 		F8C691D94D8C0C2614F38B65 /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +89,10 @@
 				94E0FC471BD7FC3600A3C537 /* Info.plist */,
 				94E0FC441BD7FC3600A3C537 /* Main.storyboard */,
 				94E0FC421BD7FC3600A3C537 /* Assets.xcassets */,
+				D41CF1241FA48189002F6DEC /* PullRequest.swift */,
+				D4CDE29E1FA4D2610066EE18 /* PullRequestsViewController.swift */,
+				D4CDE2A01FA4D27C0066EE18 /* PullRequestView.xib */,
+				D4CDE2A21FA4D31A0066EE18 /* PullRequestView.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -155,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CDE2A11FA4D27C0066EE18 /* PullRequestView.xib in Resources */,
 				94E0FC431BD7FC3600A3C537 /* Assets.xcassets in Resources */,
 				94E0FC461BD7FC3600A3C537 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +236,9 @@
 			files = (
 				94E0FC4E1BD7FCBE00A3C537 /* EventMonitor.swift in Sources */,
 				94E0FC411BD7FC3600A3C537 /* ViewController.swift in Sources */,
+				D41CF1251FA48189002F6DEC /* PullRequest.swift in Sources */,
+				D4CDE2A31FA4D31A0066EE18 /* PullRequestView.swift in Sources */,
+				D4CDE29F1FA4D2610066EE18 /* PullRequestsViewController.swift in Sources */,
 				94E0FC3F1BD7FC3600A3C537 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
