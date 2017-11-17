@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import AFNetworking
+import Alamofire
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -64,13 +64,54 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let url = apiRepoUrl + "/" + repo + "/pullrequests/?state=OPEN"
         
-        let manager = AFHTTPSessionManager.init()
-        manager.responseSerializer = AFJSONResponseSerializer()
-        manager.requestSerializer.clearAuthorizationHeader()
-        manager.requestSerializer.setAuthorizationHeaderFieldWithUsername(user, password: pass)
-        manager.get(url, parameters: nil, progress:nil, success: { (task, any) in
+        let bearer =  Request.authorizationHeader(user: user, password: pass)!
+        let headers : HTTPHeaders = [bearer.key : bearer.value]
+        
+        Alamofire.request(url, method: .get, parameters: [:], encoding: JSONEncoding.default, headers:headers).responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                print(json)
+                if let result = json as? [String: Any], let prs = result["values"] as? [Any]  {
+//                for case let pr as [String: Any] in prs {
+//                    print("-----")
+//
+//                    if  let title = pr["title"] as? String {
+//                        print("title: \(title)")
+//                    }
+//
+//                    if let author = pr["author"] as? [String: Any], let display_name = author["display_name"] as? String {
+//                        print("author: \(display_name)")
+//                    }
+//
+//                    if let destination = pr["destination"] as? [String: Any],
+//                        let branch = destination["branch"] as? [String: Any],
+//                        let name = branch["name"] as? String {
+//
+//                        print("destination: \(name)")
+//                    }
+//                }
+
+                if self.currentAmountOfPullRequests != -1 && self.currentAmountOfPullRequests < prs.count {
+                    self.showNotification(amountOfPullRequests: prs.count)
+                }
+
+                self.currentAmountOfPullRequests = prs.count
+
+                self.updateStatusToView(nil)
+                
+            }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                
+                self.updateStatusToView(error)
+            }
+            
+        }
+        
+        //manager.get(url, parameters: nil, progress:nil, success: { (task, any) in
            
-            if let result = any as? [String: Any], let prs = result["values"] as? [Any]  {
+            //if let result = any as? [String: Any], let prs = result["values"] as? [Any]  {
 //                for case let pr as [String: Any] in prs {
 //                    print("-----")
 //
@@ -90,18 +131,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //                    }
 //                }
                 
-                if self.currentAmountOfPullRequests != -1 && self.currentAmountOfPullRequests < prs.count {
-                    self.showNotification(amountOfPullRequests: prs.count)
-                }
-                
-                self.currentAmountOfPullRequests = prs.count
-                
-                self.updateStatusToView(nil)
-            }
-            
-        }, failure: { (task, error) in
-            self.updateStatusToView(error)
-        })
+//                if self.currentAmountOfPullRequests != -1 && self.currentAmountOfPullRequests < prs.count {
+//                    self.showNotification(amountOfPullRequests: prs.count)
+//                }
+//
+//                self.currentAmountOfPullRequests = prs.count
+//
+//                self.updateStatusToView(nil)
+//            }
+//
+//        }, failure: { (task, error) in
+//            self.updateStatusToView(error)
+//        })
     }
     
     func showNotification(amountOfPullRequests: Int) -> Void {

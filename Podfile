@@ -6,7 +6,7 @@ target 'PopRequest' do
   use_frameworks!
   platform :macos, '10.12'
 
-  pod 'AFNetworking', '~> 3.0'
+  pod 'Alamofire', '~> 4.5'
 
 
 end
